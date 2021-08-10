@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.source.mapper.ImageUpdateInfoMapper">
+  <resultMap id="BaseResultMap" type="com.source.bean.ImageUpdateInfo">
+    <!--@mbg.generated-->
+    <!--@Table image_update_info-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="md5" jdbcType="VARCHAR" property="md5" />
+    <result column="filename" jdbcType="VARCHAR" property="fileName" />
+    <result column="filesize" jdbcType="INTEGER" property="filesize" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="desc" jdbcType="VARCHAR" property="desc" />
+    <result column="IP" jdbcType="VARCHAR" property="ip" />
+    <result column="SYSTEM" jdbcType="VARCHAR" property="system" />
+    <result column="BROWSER" jdbcType="VARCHAR" property="browser" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, url, md5, filename, filesize, `type`, `status`, create_time, `desc`,
+    IP, `SYSTEM`, BROWSER
+  </sql>
+
+  <select id="findTodayUploadCount" parameterType="java.lang.String" resultType="java.lang.Long">
+    SELECT count(1) FROM image_update_info WHERE username=#{username,jdbcType=VARCHAR} AND create_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY)
+  </select>
+
+  <select id="findIpTodayUploadCount" parameterType="java.lang.String" resultType="java.lang.Long">
+    SELECT count(1) FROM image_update_info WHERE IP=#{ip,jdbcType=VARCHAR} AND create_time between CURDATE() and DATE_ADD(CURDATE(), INTERVAL 1 DAY)
+  </select>
+</mapper>
