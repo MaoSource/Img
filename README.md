@@ -16,12 +16,8 @@
 
 ### Fat Jar
 
-下载最新的 Img 运行包：
+拉取最新代码：
 
 ```bash
-curl -L https://github.com/halo-dev/halo/releases/download/v1.4.11/halo-1.4.11.jar --output halo.jar
-```
-
-```bash
-java -jar halo.jar
+git clone https://github.com/MaoSource/Img.git
 ```
