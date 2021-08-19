@@ -10,7 +10,7 @@
 
 **Img** ，一个简单的开源图床系统。
 
-[官网](https://maosource.com) | [前端项目地址](https://github.com/MaoSource/images)
+[官网](https://maosource.com) | [前端项目地址](https://github.com/MaoSource/images) | [Minio文档地址](https://blog.csdn.net/qq_43329216)
 
 ## 快速开始
 
