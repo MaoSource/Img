@@ -12,6 +12,8 @@
 
 [官网](https://maosource.com) | [前端项目地址](https://github.com/MaoSource/images) | [Minio文档地址](https://blog.csdn.net/qq_43329216)
 
+[预览地址](http://1.14.135.121)
+
 ## 快速开始
 
 ### Fat Jar
